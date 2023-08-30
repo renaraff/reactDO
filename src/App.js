@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
 
@@ -36,17 +37,29 @@ function App() {
     <header>
       <h1>TO DO LIST</h1>
     </header>
-      <div>
-        <input type="text" nome= "tarefa" placeholder="Digite sua tarefa" value={tarefa.texto} onChange={ (e) => setTarefa( {id: Math.random(), texto: e.target.value, status: false })} />
-        <button onClick={addTarefa}>Add itens</button>
-    
+    <div className="caixa">
+      <div className="caixa1">
+        <button className="adicionar" onClick={addTarefa}>+</button>
+        <input maxLength={60} type="text" nome= "tarefa" value={tarefa.texto} onChange={ (e) => setTarefa( {id: Math.random(), texto: e.target.value, status: false })} />
       </div>
-      <div>
+      <div className="caixa2">
         <ul> 
           {listaTarefas.map( (item, index ) => (
-           <li key={item.id}>{item.texto}<button  onClick={() => concluirTarefa(item.id, item.status) }>{item.status ? 'Concluida' : 'Não Concluida'}</button> <button onClick={() => excluirTarefa(item.id) }>Excluir</button></li>
+           <li className="lista" key={item.id}>
+            <button className="botao" onClick={() => concluirTarefa(item.id, item.status) }>{item.status ? '☑' : '☐'}</button>
+            <button className="botao" onClick={() => excluirTarefa(item.id) }>☒</button>
+            {item.texto}</li>
           ))}
         </ul>
+      </div>
+      </div>
+      <div className="rodape">
+      <p>OUTRAS LISTAS</p>
+          <ul>
+            <li className="li"><a href="#"> ✦ LISTA 1</a></li>
+            <li className="li"><a href="#"> ✦ LISTA 2</a></li>
+          </ul>
+
       </div>
     </>
    

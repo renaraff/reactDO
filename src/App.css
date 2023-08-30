@@ -1,0 +1,89 @@
+:root {
+    --color-gradient: linear-gradient( 90deg, #FFF7AD, #FFA9F9 ) fixed;
+}
+body, html, ul, li, a, div, section, nav, span, p {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-gradient);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+h1{
+    font-weight: bold;
+    font-size: 27px;
+    text-decoration: underline;
+}
+header {
+    margin: 0 auto;
+    background-color: #F4B8C3;
+    width: 100%;    
+    border-radius: 50px;
+    height: 3%;
+}
+.caixa{
+    width: 100%;
+    margin-top: 10%;
+}
+.caixa1{
+    margin: 0 auto;
+}
+.caixa2{
+    margin: 0 auto;
+    width: 80%;
+    background-color: #f4b8c3;
+    border-radius: 46px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+}
+input {
+    background: none;
+    border-radius: 5px;
+    padding: 8px;    
+}
+.adicionar{
+    margin-right: 1%;
+    font-size: 24px;
+    text-align: center;
+    background-color: #F4B8C3;
+    
+    border-radius: 100%;
+    border: none;
+}
+.lista {
+    list-style-type: none;
+    text-align: start;
+}
+.lista li{
+    margin-bottom: 200px;
+}
+.botao{
+    border: none;
+    font-size: 19px;
+    background: none;
+    height: 3%;
+}
+.rodape{
+    background-color: #F4B8C3;
+    width: 100%;
+    height: 30%;
+    border-radius: 2%;
+    position: absolute;
+    bottom: 0;
+}
+.rodape li {
+    height: 25px;
+    margin: 0 auto;
+    padding: 0px;
+    width: 80%;
+    list-style-type: none;
+}
+.rodape li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding: 30px;
+    text-decoration: underline;
+}
